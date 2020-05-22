@@ -7,9 +7,8 @@ def save_embeddings(embeddings, label, output_file_path):
 
     with open(output_file_path, 'w+') as f:
         idx = 0
-        for id_emb in embeddings:
-            f.write(str(id_emb[0]))
-            f.write(' '.join(map(str, id_emb[1])))
+        for emb in embeddings:
+            f.write(' '.join(map(str, emb)))
             f.write(' ' + label[idx])
             f.write('\n')
             idx += 1
@@ -17,15 +16,16 @@ def save_embeddings(embeddings, label, output_file_path):
 
 if __name__ == '__main__':
 
-    emb_file_path = 'data/sanfrancisco_raw_feature_crossing_labeled.embeddings'
+    emb_file_path = 'data/sanfrancisco_raw_feature_crossing.embeddings'
     tsne_emb_path = 'data/sanfrancisco_raw_feature_crossing_tsne.embeddings'
     # df = pd.read_csv(emb_file_path)
     df = pd.read_csv(emb_file_path, header=None, sep=' ', index_col=0)
-    X = df
 
     rows, cols = df.shape
     label = df[cols]
     del df[cols]
+
+    X = df
 
     X_embedded = TSNE(n_components=2).fit_transform(X)
 
