@@ -16,7 +16,7 @@ def save_embeddings(embeddings, label, output_file_path):
 
 if __name__ == '__main__':
 
-    emb_file_path = 'data/sanfrancisco_raw_feature_crossing.embeddings'
+    emb_file_path = 'data/sanfrancisco_raw_feature_crossing_labeled.embeddings'
     tsne_emb_path = 'data/sanfrancisco_raw_feature_crossing_tsne.embeddings'
     # df = pd.read_csv(emb_file_path)
     df = pd.read_csv(emb_file_path, header=None, sep=' ', index_col=0)
@@ -29,4 +29,4 @@ if __name__ == '__main__':
 
     X_embedded = TSNE(n_components=2).fit_transform(X)
 
-    save_embeddings(X_embedded, label, tsne_emb_path)
+    save_embeddings(X_embedded, label.values, tsne_emb_path)
