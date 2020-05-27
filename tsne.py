@@ -16,8 +16,8 @@ def save_embeddings(embeddings, label, output_file_path):
 
 if __name__ == '__main__':
 
-    emb_file_path = 'data/sanfrancisco_random_node2vec_d128_wl1280_node_labeled.embedding'
-    tsne_emb_path = 'data/sanfrancisco_random_node2vec_d128_wl1280_node_tsne.embeddings'
+    emb_file_path = 'data/sanfrancisco_shortest_dist_increment_tag_type_distance1000_with_crossing_labeled.embedding'
+    tsne_emb_path = 'data/sanfrancisco_shortest_dist_increment_tag_type_distance1000_with_crossing_labeled_tsne.embedding'
     # df = pd.read_csv(emb_file_path)
     df = pd.read_csv(emb_file_path, header=None, sep=' ', index_col=0)
 
