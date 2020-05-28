@@ -9,15 +9,15 @@ def save_embeddings(embeddings, label, output_file_path):
         idx = 0
         for emb in embeddings:
             f.write(' '.join(map(str, emb)))
-            f.write(' ' + label[idx])
+            f.write(' ' + str(label[idx]))
             f.write('\n')
             idx += 1
 
 
 if __name__ == '__main__':
 
-    emb_file_path = 'data/sf_node2vec_128_labeled.embeddings'
-    tsne_emb_path = 'data/sf_node2vec_128_labeled_tsne.embeddings'
+    emb_file_path = 'data/sanfrancisco_combined_pca_traffic_labeled_multi.embeddings'
+    tsne_emb_path = 'data/sanfrancisco_combined_pca_traffic_labeled_multi_tsne.embeddings'
     # df = pd.read_csv(emb_file_path)
     df = pd.read_csv(emb_file_path, header=None, sep=' ', index_col=0)
 
