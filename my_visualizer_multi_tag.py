@@ -19,7 +19,7 @@ with open(emb_path) as f:
         label = float(x_y_label[-1])
         sf_X.append(x)
         sf_Y.append(y)
-        sf_T.append(label/4)  # yellow
+        sf_T.append(label)  # yellow
 
 sf_X = np.array(sf_X)
 sf_Y = np.array(sf_Y)
