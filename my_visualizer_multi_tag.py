@@ -38,6 +38,8 @@ with open(emb_path) as f:
         label = int(x_y_label[-1])
         sf_X.append(x)
         sf_Y.append(y)
+        if label == -1:
+            label = 7
         sf_T.append(colors[label])
 
 sf_X = np.array(sf_X)
