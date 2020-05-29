@@ -5,15 +5,15 @@ import numpy as np
 emb_path = 'data/sanfrancisco_combined_pca_traffic_labeled_multi_tsne.embeddings'
 x_location = (-80, 65)
 y_location = (-80, 80)
-color_0 = -2
-color_1 = -2
-color_2 = -2
-color_3 = -2
-color_4 = -2
-color_5 = -2
-color_6 = -2
-color_7 = -2
-color_8 = -2
+color_0 = -2.0
+color_1 = -1.5
+color_2 = -1.0
+color_3 = -0.5
+color_4 = 0
+color_5 = 0.5
+color_6 = 1
+color_7 = 1.5
+color_8 = 2
 
 sf_X = []
 sf_Y = []
