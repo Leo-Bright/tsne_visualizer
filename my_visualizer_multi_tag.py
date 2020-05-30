@@ -15,6 +15,16 @@ color_6 = 'lightsalmon'
 color_7 = 'mediumblue'
 color_8 = 'pink'
 
+labels = {0: 'turning_loop',
+          1: 'give_way',
+          2: 'bus_stop',
+          3: 'turning_circle',
+          4: 'traffic_signals',
+          5: 'crossing',
+          6: 'stop',
+          7: 'others',
+          8: 'motorway'}
+
 sf_X = {}
 sf_Y = {}
 sf_T = {}
@@ -28,16 +38,6 @@ colors = {0: color_0,
           6: color_6,
           7: color_7,
           8: color_8}
-
-labels = {0: 'turning_loop',
-          1: 'give_way',
-          2: 'bus_stop',
-          3: 'turning_circle',
-          4: 'traffic_signals',
-          5: 'crossing',
-          6: 'stop',
-          7: 'others',
-          8: 'motorway'}
 
 sf_T = colors
 
