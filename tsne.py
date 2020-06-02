@@ -16,8 +16,8 @@ def save_embeddings(embeddings, label, output_file_path):
 
 if __name__ == '__main__':
 
-    emb_file_path = 'data/sanfrancisco_combined_pca_traffic_labeled_multi.embeddings'
-    tsne_emb_path = 'data/sanfrancisco_combined_pca_traffic_labeled_multi_tsne.embeddings'
+    emb_file_path = 'data/segment/sanfrancisco_raw_feature_segment_labeled.embeddings'
+    tsne_emb_path = 'data/segment/sanfrancisco_raw_feature_segment_labeled_tsne.embeddings'
     # df = pd.read_csv(emb_file_path)
     df = pd.read_csv(emb_file_path, header=None, sep=' ', index_col=0)
 
