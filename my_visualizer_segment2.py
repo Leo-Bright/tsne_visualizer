@@ -4,6 +4,7 @@ import numpy as np
 
 labels = ('Ave', 'unnormal')
 colors = ('darkviolet', 'brown')
+show_legend = False  # 是否开启图注
 
 emb_path = 'data/segment/sanfrancisco_raw_feature_segment_labeled_tsne.embeddings'
 x_location = (-30, 15)
@@ -42,9 +43,10 @@ for label in labels:
     _scatter = plt.scatter(sf_X[label], sf_Y[label], s=5, c=sf_T[label], alpha=.5)
     scatters.append(_scatter)
 
-plt.legend(handles=scatters,
-           labels=labels,
-           loc='upper right')
+if show_legend:
+    plt.legend(handles=scatters,
+               labels=labels,
+               loc='upper right')
 
 plt.xlim(x_location[0], x_location[1])
 plt.xticks(())  # ignore xticks
